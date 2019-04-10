@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>blockad</title>
+	</head>
+	<body style="height:2000px;">
+		<h1>這是H1</h1>
+			<script>
+			var w_adbot = (top !== self) ? window.top : window, d_adbot = w_adbot.document;
+			w_adbot.noadpassbacktest = function(data) {
+				console.log('fire noad passback');
+				console.log(data);
+			}
+			</script>
+		<script>
+			var w_adbot = (top !== self) ? window.top : window, d_adbot = w_adbot.document;
+			w_adbot._adbot_partner_id = '477b327bba97571ba8005c72c22a0b8f'; // default
+			w_adbot._adbot_keywords = ["Nike", "English", "Chinese"];
+			w_adbot._adbot_slots = ['kwads'];
+			w_adbot._adbot_color = '';
+			w_adbot._adbot_label = '';
+			w_adbot._adbot_noad_passback_function = 'window.noadpassbacktest';
+
+			w_adbot._adbot_ext_propeller = {
+				    enabled_hour_start: 8, // hottime開放時間(24h) enabled_hour_start - enabled_hour_end
+				    enabled_hour_end: 18, // hottime關閉時間(24h)
+				    normaltime_ratio: 100, // 非 hottime 手機一般流量自動開啟率
+				    normaltime_se_ratio: 100, // 非 hottime 手機搜尋引擎流量自動開啟率
+				    normaltime_fb_ratio: 100, // 非 hottime 手機 FB 流量自動開啟率
+				    hottime_ratio: 100, // hottime 手機一般流量自動開啟率
+				    hottime_se_ratio: 100, // hottime 手機搜尋引擎流量自動開啟率
+				    hottime_fb_ratio: 100, // hottime 手機 FB 流量自動開啟率
+				    d_normaltime_ratio: 100, // 非 hottime 桌機一般流量自動開啟率
+				    d_normaltime_se_ratio: 100, // 非 hottime 桌機搜尋引擎流量自動開啟率
+				    d_normaltime_fb_ratio: 100, // 非 hottime 桌機 FB 流量自動開啟率
+				    d_hottime_ratio: 100, // hottime 桌機一般流量自動開啟率
+				    d_hottime_se_ratio: 100, // hottime 桌機搜尋引擎流量自動開啟率
+				    d_hottime_fb_ratio: 100 // hottime 桌機 FB 流量自動開啟率
+			};
+
+			var script = w_adbot.document.createElement('script');
+			script.type = "text/javascript";
+			script.src = "https://brain.adbot.tw/js/bootstrap.min.js";
+			script.setAttribute('charset', 'utf-8');
+			w_adbot.document.getElementsByTagName('head')[0].appendChild(script);
+		</script>
+	</body>
+</html>
+
